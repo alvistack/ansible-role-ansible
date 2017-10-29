@@ -1,0 +1,4 @@
+---
+
+- src: https://github.com/alvistack/ansible-role-python
+  version: master
