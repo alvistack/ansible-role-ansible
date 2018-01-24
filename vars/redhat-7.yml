@@ -16,4 +16,5 @@
 
 _pip: [
   { state: "latest", name: "ansible" },
+  { state: "latest", name: "netaddr" },
 ]
