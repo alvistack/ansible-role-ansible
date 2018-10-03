@@ -15,6 +15,7 @@
 # limitations under the License.
 
 _pip: [
+  { version: "2.18", name: "pycparser" },
   { state: "latest", name: "ansible" },
   { state: "latest", name: "ansible-modules-hashivault" },
   { state: "latest", name: "hvac" },
