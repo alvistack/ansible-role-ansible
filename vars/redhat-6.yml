@@ -15,7 +15,7 @@
 # limitations under the License.
 
 _pip: [
-  { version: "2.5.10", name: "ansible" },
+  { version: "2.5.11", name: "ansible" },
   { version: "3.8.6", name: "ansible-modules-hashivault" },
   { state: "latest", name: "hvac" },
   { state: "latest", name: "jinja2" },
