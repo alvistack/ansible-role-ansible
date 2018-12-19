@@ -16,8 +16,8 @@
 
 _pip: [
   { state: "latest", name: "ansible" },
-  { state: "present", name: "ansible-modules-hashivault" },
-  { state: "present", name: "hvac" },
+  { version: "3.5.1", name: "ansible-modules-hashivault" },
+  { version: "0.2.5", name: "hvac" },
   { state: "latest", name: "jinja2" },
   { state: "present", name: "netaddr" },
   { state: "latest", name: "notario" },
