@@ -15,11 +15,11 @@
 # limitations under the License.
 
 _pip: [
-  { state: "latest", name: "ansible" },
-  { state: "latest", name: "ansible-modules-hashivault" },
   { state: "latest", name: "hvac" },
-  { state: "latest", name: "jinja2" },
+  { state: "latest", name: "ansible-modules-hashivault" },
   { state: "latest", name: "netaddr" },
+  { state: "latest", name: "jinja2" },
   { state: "latest", name: "notario" },
   { state: "latest", name: "pbr" },
+  { state: "latest", name: "ansible" },
 ]
