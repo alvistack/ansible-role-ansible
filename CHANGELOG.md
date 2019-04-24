@@ -4,6 +4,9 @@
 
 ### Major Changes
 
+  - Remove legacy packages
+  - Install ansible-lint, yamllint and molecule
+
 ## 2.5.0 - 2019-04-17
 
 ### Major Changes
