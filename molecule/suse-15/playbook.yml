@@ -16,12 +16,14 @@
 
 - hosts: all
   remote_user: root
+  become: true
   roles:
     - role: python
     - role: ansible
 
 - hosts: all
   remote_user: root
+  become: true
   tasks:
     - name: ansible --version
       command: ansible --version
