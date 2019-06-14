@@ -15,9 +15,9 @@
 # limitations under the License.
 
 _pip: [
-  { state: "latest", name: "ansible" },
-  { state: "latest", name: "ansible-lint" },
-  { state: "latest", name: "molecule" },
   { state: "latest", name: "netaddr" },
   { state: "latest", name: "yamllint" },
+  { state: "latest", name: "ansible" },
+  { state: "latest", name: "ansible-lint" },
+  { state: "present", name: "molecule>=2.22rc1" },
 ]
