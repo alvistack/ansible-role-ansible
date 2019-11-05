@@ -22,6 +22,6 @@ _pip:
   - { state: "latest", name: "testinfra>=3.0.4" }
   - { state: "latest", name: "python-vagrant" }
   - { state: "latest", name: "docker>=2.0.0" }
-  - { state: "latest", name: "ansible>=2.8.0" }
+  - { state: "latest", name: "ansible>=2.9.0" }
   - { state: "latest", name: "ansible-lint" }
   - { state: "latest", name: "molecule" }
