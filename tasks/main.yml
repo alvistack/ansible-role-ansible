@@ -81,7 +81,7 @@
     PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
   shell: |
     set -o pipefail
-    _MOLECULE_COMPLETE=source molecule > /etc/bash_completion.d/molecule
+    su -l -s /bin/bash -c '_MOLECULE_COMPLETE=source molecule' > /etc/bash_completion.d/molecule
   args:
     executable: "/bin/bash"
     creates: "/etc/bash_completion.d/molecule"
