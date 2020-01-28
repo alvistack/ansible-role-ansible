@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Install bash completion
+
 ## 4.1.0 - 2020-01-16
 
 ### Major Changes

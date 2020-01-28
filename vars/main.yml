@@ -23,5 +23,7 @@ _pip:
   - { state: "latest", name: "python-vagrant" }
   - { state: "latest", name: "docker>=2.0.0" }
   - { state: "latest", name: "ansible>=2.9.0" }
+  - { state: "latest", name: "ansible-runner" }
+  - { state: "latest", name: "ansible-runner-http" }
   - { state: "latest", name: "ansible-lint" }
   - { state: "latest", name: "molecule" }
