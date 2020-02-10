@@ -3,7 +3,7 @@
 ## 4.2.0 - TBC
 
 ### Major Changes
-
+  - Support Ubuntu 19.10
   - Migrate molecule tests to Libvirt
   - Install bash completion
 
