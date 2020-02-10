@@ -5,6 +5,7 @@
 ### Major Changes
 
   - Migrate molecule tests to Libvirt
+  - Support Ubuntu 19.10
   - Install bash completion
 
 ## 4.1.0 - 2020-01-16
