@@ -17,9 +17,9 @@
 _pip:
   - { state: "latest", name: "netaddr" }
   - { state: "latest", name: "yamllint" }
-  - { state: "latest", name: "openshift>=0.9.0" }
+  - { state: "latest", name: "openshift" }
   - { state: "latest", name: "python-vagrant" }
-  - { state: "latest", name: "docker>=2.0.0" }
+  - { state: "latest", name: "docker" }
   - { state: "latest", name: "ansible>=2.9.0" }
   - { state: "latest", name: "ansible-runner" }
   - { state: "latest", name: "ansible-runner-http" }
