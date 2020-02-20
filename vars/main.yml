@@ -24,4 +24,4 @@ _pip:
   - { state: "latest", name: "ansible-runner" }
   - { state: "latest", name: "ansible-runner-http" }
   - { state: "latest", name: "ansible-lint" }
-  - { state: "latest", name: "molecule" }
+  - { state: "latest", name: "molecule~=2.22.0" }
