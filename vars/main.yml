@@ -15,13 +15,16 @@
 # limitations under the License.
 
 _pip:
+  - { state: "latest", name: "argcomplete" }
   - { state: "latest", name: "netaddr" }
   - { state: "latest", name: "yamllint" }
+  - { state: "latest", name: "flake8" }
   - { state: "latest", name: "openshift" }
-  - { state: "latest", name: "python-vagrant" }
   - { state: "latest", name: "docker" }
-  - { state: "latest", name: "ansible>=2.9.0" }
+  - { state: "latest", name: "python-vagrant" }
+  - { state: "latest", name: "ansible>=2.9.5" }
+  - { state: "latest", name: "ansible-lint" }
   - { state: "latest", name: "ansible-runner" }
   - { state: "latest", name: "ansible-runner-http" }
-  - { state: "latest", name: "ansible-lint" }
-  - { state: "latest", name: "molecule~=2.22.0" }
+  - { state: "latest", name: "molecule>=3.0.2" }
+  - { state: "latest", name: "molecule-vagrant" }
