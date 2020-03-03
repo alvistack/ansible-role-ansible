@@ -17,7 +17,12 @@
 - hosts: all
   remote_user: root
   become: true
-  roles:
-    - role: python
-    - role: locales
-    - role: ansible
+  tasks:
+    - include_role:
+        name: python
+
+    - include_role:
+        name: locales
+
+    - include_role:
+        name: ansible
