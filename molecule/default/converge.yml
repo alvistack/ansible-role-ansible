@@ -22,7 +22,4 @@
         name: python
 
     - include_role:
-        name: locales
-
-    - include_role:
         name: ansible
