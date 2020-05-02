@@ -13,7 +13,12 @@ You will need this Ansible Role if you also hope to manage the repository and de
 
 This role require Ansible 2.9 or higher.
 
-This role was designed for Ubuntu 18.04/19.10/20.04 or RHEL/CentOS 7/8 or openSUSE Leap 15.1.
+This role was designed for:
+
+  - Ubuntu 18.04/19.10/20.04
+  - Debian 10
+  - RHEL/CentOS 7/8
+  - openSUSE Leap 15.1
 
 ## Role Variables
 
@@ -21,11 +26,15 @@ This role was designed for Ubuntu 18.04/19.10/20.04 or RHEL/CentOS 7/8 or openSU
 
 ## Dependencies
 
-[meta/main.yml](meta/main.yml)
+[ansible-role-requirements.yml](ansible-role-requirements.yml)
 
 ## Example Playbook
 
 [molecule/default/converge.yml](molecule/default/converge.yml)
+
+This role could simply deploy to `localhost` as below:
+
+    molecule converge -s default
 
 ## License
 
