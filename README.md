@@ -27,7 +27,7 @@ This role was designed for:
 
 ## Dependencies
 
-[ansible-role-requirements.yml](ansible-role-requirements.yml)
+[ansible-galaxy-requirements.yml](ansible-galaxy-requirements.yml)
 
 ## Example Playbook
 
