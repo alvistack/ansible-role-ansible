@@ -71,9 +71,9 @@
     extra_args: "--ignore-installed --prefix=/usr/local"
     executable: "pip3"
   loop: "{{ _pip }}"
-  register: pip_result
-  until: pip_result is succeeded
-  changed_when: pip_result is not succeeded
+  register: result
+  until: result is succeeded
+  changed_when: result is not succeeded
   tags: ansible
 
 - name: install bash completion
@@ -84,7 +84,8 @@
     _MOLECULE_COMPLETE=source molecule > /etc/bash_completion.d/molecule
   args:
     executable: "/bin/bash"
-  when: pip_result is changed
+  changed_when: false
+  ignore_errors: true
   tags: ansible
 
 - name: prepare files
