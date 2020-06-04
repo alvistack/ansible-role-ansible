@@ -84,9 +84,8 @@
     _MOLECULE_COMPLETE=source molecule > /etc/bash_completion.d/molecule
   args:
     executable: "/bin/bash"
-    creates: "/etc/bash_completion.d/molecule"
-  register: result
-  changed_when: result is not succeeded
+  changed_when: false
+  ignore_errors: true
   tags: ansible
 
 - name: prepare files
