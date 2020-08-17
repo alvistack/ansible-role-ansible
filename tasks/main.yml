@@ -66,7 +66,7 @@
     ansible_python_interpreter: "python3"
   pip:
     name: "{{ item.name }}"
-    state: "{{ item.state | default(None) or omit }}"
+    state: "{{ item.state }}"
     version: "{{ item.version | default(None) or omit }}"
     extra_args: "--prefix=/usr/local --upgrade {{ item.extra_args | default(None) }}"
     executable: "pip3"
