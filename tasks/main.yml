@@ -76,6 +76,18 @@
   changed_when: result is not succeeded
   tags: ansible
 
+- name: ansible-galaxy collection install
+  environment:
+    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+  vars:
+    ansible_python_interpreter: "python3"
+  command: ansible-galaxy collection install --force "{{ item.name }}"
+  loop: "{{ _ansible_collection }}"
+  register: result
+  until: result is succeeded
+  changed_when: result is not succeeded
+  tags: ansible
+
 - name: install bash completion
   environment:
     PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"

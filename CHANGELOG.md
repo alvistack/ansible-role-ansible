@@ -1,9 +1,14 @@
 # Ansible Role for Ansible
 
-## 4.5.0 - TBC
+## 4.6.0 - TBC
 
 ### Major Changes
 
+## 4.5.0 - 2020-08-26
+
+### Major Changes
+
+  - Install Ansible Collections
   - Upgrade Travis CI test as Ubuntu Focal based
   - Upgrade minimal Ansible support to 2.10.0
   - Support openSUSE Leap 15.2
