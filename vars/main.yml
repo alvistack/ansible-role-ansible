@@ -30,6 +30,7 @@ _pip:
   - { state: "latest", name: "molecule-vagrant" }
 
 _ansible_collection:
+  - { state: "latest", name: "community.general:>=1.0.0,<2.0.0" }
   - { state: "latest", name: "community.kubernetes:>=1.0.0,<2.0.0" }
   - { state: "latest", name: "containers.podman:>=1.0.0,<2.0.0" }
   - { state: "latest", name: "operator_sdk.util:>=0.0.0,<1.0.0" }
