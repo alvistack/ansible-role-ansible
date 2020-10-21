@@ -27,6 +27,8 @@ _pip:
   - { state: "latest", name: "ansible-runner" }
   - { state: "latest", name: "ansible-runner-http" }
   - { state: "latest", name: "molecule>=3.0.8,<3.1.0" }
+  - { state: "latest", name: "molecule-docker" }
+  - { state: "latest", name: "molecule-podman" }
   - { state: "latest", name: "molecule-vagrant" }
 
 _ansible_collection:
