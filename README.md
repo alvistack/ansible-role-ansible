@@ -1,6 +1,6 @@
 # Ansible Role for Ansible
 
-[![Travis](https://img.shields.io/travis/com/alvistack/ansible-role-ansible.svg)](https://travis-ci.com/alvistack/ansible-role-ansible)
+[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-ansible/master)](https://gitlab.com/alvistack/ansible-role-ansible/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-ansible.svg)](https://github.com/alvistack/ansible-role-ansible/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-ansible.svg)](https://github.com/alvistack/ansible-role-ansible/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.ansible-blue.svg)](https://galaxy.ansible.com/alvistack/ansible)
