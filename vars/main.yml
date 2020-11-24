@@ -15,6 +15,7 @@
 # limitations under the License.
 
 _pip:
+  - { state: "latest", name: "enrich>=1.2.3" }
   - { state: "latest", name: "argcomplete" }
   - { state: "latest", name: "netaddr" }
   - { state: "latest", name: "yamllint" }
@@ -26,7 +27,7 @@ _pip:
   - { state: "latest", name: "ansible-lint" }
   - { state: "latest", name: "ansible-runner" }
   - { state: "latest", name: "ansible-runner-http" }
-  - { state: "latest", name: "molecule==3.2.0a0" }
+  - { state: "latest", name: "molecule>=3.2.0a1,<3.3.0" }
   - { state: "latest", name: "molecule-docker" }
   - { state: "latest", name: "molecule-podman" }
   - { state: "latest", name: "molecule-vagrant" }
