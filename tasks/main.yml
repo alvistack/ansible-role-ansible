@@ -54,6 +54,7 @@
     state: "{{ item.state | default('directory') }}"
   loop:
     - { dest: "/etc/bash_completion.d" }
+    - { dest: "/etc/profile.d" }
 
 - name: pip install
   environment:
@@ -93,6 +94,16 @@
   changed_when: false
   ignore_errors: true
 
+- name: copy templates
+  template:
+    dest: "{{ item.dest }}"
+    src: "{{ item.src | default('./templates' + item.dest + '.j2') }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0644') }}"
+  loop:
+    - { dest: "/etc/profile.d/ansible.sh" }
+
 - name: prepare files
   file:
     dest: "{{ item.dest }}"
@@ -102,3 +113,4 @@
     state: "{{ item.state | default('file') }}"
   loop:
     - { dest: "/etc/bash_completion.d/molecule" }
+    - { dest: "/etc/profile.d/ansible.sh" }
