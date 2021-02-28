@@ -56,7 +56,6 @@
         subscription-manager register \
           --username={{ lookup('env', 'REDHAT_USERNAME') }} \
           --password={{ lookup('env', 'REDHAT_PASSWORD') }} \
-          --insecure \
           --auto-attach
       changed_when: false
       ignore_errors: true
