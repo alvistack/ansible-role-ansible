@@ -14,25 +14,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_pip:
-  - { state: "latest", name: "argcomplete" }
-  - { state: "latest", name: "netaddr" }
-  - { state: "latest", name: "yamllint" }
-  - { state: "latest", name: "flake8" }
-  - { state: "latest", name: "openshift" }
-  - { state: "latest", name: "docker" }
-  - { state: "latest", name: "python-vagrant" }
-  - { state: "latest", name: "ansible>=2.10.3,<2.11.0" }
-  - { state: "latest", name: "ansible-lint" }
-  - { state: "latest", name: "ansible-runner" }
-  - { state: "latest", name: "ansible-runner-http" }
-  - { state: "latest", name: "molecule>=3.2.0,<3.3.0" }
-  - { state: "latest", name: "molecule-docker" }
-  - { state: "latest", name: "molecule-podman" }
-  - { state: "latest", name: "molecule-vagrant" }
+_pipx:
+  - { state: "install", name: "ansible", args: "--include-deps --pip-args='ansible>=2.10.3,<2.11.0 docker netaddr openshift'" }
+  - { state: "install", name: "ansible-lint", args: "--pip-args='ansible>=2.10.3,<2.11.0'" }
+  - { state: "install", name: "flake8" }
+  - { state: "install", name: "molecule", args: "--pip-args='molecule>=3.2.0,<3.3.0 ansible>=2.10.3,<2.11.0 docker molecule-docker molecule-podman molecule-vagrant python-vagrant'" }
+  - { state: "install", name: "yamllint" }
 
 _ansible_collection:
-  - { state: "latest", name: "community.general:>=1.0.0,<2.0.0" }
-  - { state: "latest", name: "community.kubernetes:>=1.0.0,<2.0.0" }
-  - { state: "latest", name: "containers.podman:>=1.0.0,<2.0.0" }
-  - { state: "latest", name: "operator_sdk.util:>=0.0.0,<1.0.0" }
+  - { state: "install", name: "community.general:>=1.0.0,<2.0.0" }
+  - { state: "install", name: "community.kubernetes:>=1.0.0,<2.0.0" }
+  - { state: "install", name: "containers.podman:>=1.0.0,<2.0.0" }
+  - { state: "install", name: "operator_sdk.util:>=0.0.0,<1.0.0" }
