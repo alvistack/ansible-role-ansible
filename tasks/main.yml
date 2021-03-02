@@ -56,18 +56,16 @@
     - { dest: "/etc/bash_completion.d" }
     - { dest: "/etc/profile.d" }
 
-- name: pip install
+- name: pipx install
   environment:
     PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-  vars:
-    ansible_python_interpreter: "python3"
-  pip:
-    name: "{{ item.name }}"
-    state: "{{ item.state }}"
-    version: "{{ item.version | default(None) or omit }}"
-    extra_args: "--prefix=/usr/local --upgrade {{ item.extra_args | default(None) }}"
-    executable: "pip3"
-  loop: "{{ _pip }}"
+  shell: |
+    set -euo pipefail
+    source /etc/profile.d/pipx.sh
+    pipx {{ item.state }} --force {{ item.args | default('') }} "{{ item.name }}"
+  args:
+    executable: "/bin/bash"
+  loop: "{{ _pipx }}"
   register: result
   until: result is succeeded
   changed_when: result is not succeeded
@@ -77,7 +75,7 @@
     PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
   vars:
     ansible_python_interpreter: "python3"
-  command: ansible-galaxy collection install "{{ item.name }}"
+  command: ansible-galaxy collection {{ item.state }} "{{ item.name }}"
   loop: "{{ _ansible_collection }}"
   register: result
   until: result is succeeded
