@@ -15,11 +15,19 @@
 # limitations under the License.
 
 _pipx:
-  - { state: "install", name: "ansible", args: "--include-deps --pip-args='ansible>=2.10.3,<2.11.0 docker netaddr openshift'" }
-  - { state: "install", name: "ansible-lint", args: "--pip-args='ansible>=2.10.3,<2.11.0'" }
   - { state: "install", name: "flake8" }
-  - { state: "install", name: "molecule", args: "--pip-args='molecule>=3.2.0,<3.3.0 ansible>=2.10.3,<2.11.0 docker molecule-docker molecule-podman molecule-vagrant python-vagrant'" }
   - { state: "install", name: "yamllint" }
+  - { state: "install", name: "'ansible>=2.10.3,<2.11.0'", args: "--include-deps" }
+  - { state: "inject", name: "ansible", dependency: "ansible-lint", args: "--include-apps" }
+  - { state: "inject", name: "ansible", dependency: "ansible-runner", args: "--include-apps" }
+  - { state: "inject", name: "ansible", dependency: "'molecule>=3.2.0,<3.3.0'", args: "--include-apps" }
+  - { state: "inject", name: "ansible", dependency: "ansible-runner-http" }
+  - { state: "inject", name: "ansible", dependency: "docker" }
+  - { state: "inject", name: "ansible", dependency: "molecule-docker" }
+  - { state: "inject", name: "ansible", dependency: "molecule-podman" }
+  - { state: "inject", name: "ansible", dependency: "molecule-vagrant" }
+  - { state: "inject", name: "ansible", dependency: "openshift" }
+  - { state: "inject", name: "ansible", dependency: "python-vagrant" }
 
 _ansible_collection:
   - { state: "install", name: "community.general:>=1.0.0,<2.0.0" }
