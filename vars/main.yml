@@ -17,20 +17,12 @@
 _pipx:
   - { state: "install", name: "flake8" }
   - { state: "install", name: "yamllint" }
-  - { state: "install", name: "'ansible>=2.10.3,<2.11.0'", args: "--include-deps" }
-  - { state: "inject", name: "ansible", dependency: "ansible-lint", args: "--include-apps" }
-  - { state: "inject", name: "ansible", dependency: "ansible-runner", args: "--include-apps" }
-  - { state: "inject", name: "ansible", dependency: "'molecule>=3.2.0,<3.3.0'", args: "--include-apps" }
-  - { state: "inject", name: "ansible", dependency: "ansible-runner-http" }
-  - { state: "inject", name: "ansible", dependency: "docker" }
-  - { state: "inject", name: "ansible", dependency: "molecule-docker" }
-  - { state: "inject", name: "ansible", dependency: "molecule-podman" }
-  - { state: "inject", name: "ansible", dependency: "molecule-vagrant" }
-  - { state: "inject", name: "ansible", dependency: "openshift" }
-  - { state: "inject", name: "ansible", dependency: "python-vagrant" }
+  - { state: "install", args: "--include-deps", name: "'ansible>=2.10.3,<2.11.0'" }
+  - { state: "inject", args: "--include-apps", name: "ansible", dependency: "ansible-lint ansible-runner molecule" }
+  - { state: "inject", name: "ansible", dependency: "ansible-runner-http docker molecule-docker molecule-podman molecule-vagrant openshift python-vagrant" }
 
 _ansible_collection:
-  - { state: "install", name: "community.general:>=1.0.0,<2.0.0" }
-  - { state: "install", name: "community.kubernetes:>=1.0.0,<2.0.0" }
-  - { state: "install", name: "containers.podman:>=1.0.0,<2.0.0" }
-  - { state: "install", name: "operator_sdk.util:>=0.0.0,<1.0.0" }
+  - { state: "install", name: "'community.general:>=1.0.0,<2.0.0'" }
+  - { state: "install", name: "'community.kubernetes:>=1.0.0,<2.0.0'" }
+  - { state: "install", name: "'containers.podman:>=1.0.0,<2.0.0'" }
+  - { state: "install", name: "'operator_sdk.util:>=0.0.0,<1.0.0'" }
