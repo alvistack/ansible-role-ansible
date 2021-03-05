@@ -19,7 +19,7 @@ _pipx:
   - { state: "install", name: "yamllint" }
   - { state: "install", args: "--include-deps", name: "'ansible>=2.10.3,<2.11.0'" }
   - { state: "inject", args: "--include-apps", name: "ansible", dependency: "ansible-lint ansible-runner molecule" }
-  - { state: "inject", name: "ansible", dependency: "ansible-runner-http docker molecule-docker molecule-podman molecule-vagrant openshift python-vagrant" }
+  - { state: "inject", name: "ansible", dependency: "ansible-runner-http docker molecule-docker molecule-podman molecule-vagrant netaddr openshift python-vagrant" }
 
 _ansible_collection:
   - { state: "install", name: "'community.general:>=1.0.0,<2.0.0'" }
