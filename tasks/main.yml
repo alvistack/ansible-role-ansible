@@ -81,17 +81,6 @@
   until: result is succeeded
   changed_when: result is not succeeded
 
-- name: install bash completion
-  environment:
-    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-  shell: |
-    set -euo pipefail
-    _MOLECULE_COMPLETE=source molecule > /etc/bash_completion.d/molecule
-  args:
-    executable: "/bin/bash"
-  changed_when: false
-  ignore_errors: true
-
 - name: copy templates
   template:
     dest: "{{ item.dest }}"
@@ -110,5 +99,4 @@
     mode: "{{ item.mode | default('0644') }}"
     state: "{{ item.state | default('file') }}"
   loop:
-    - { dest: "/etc/bash_completion.d/molecule" }
     - { dest: "/etc/profile.d/ansible.sh" }
