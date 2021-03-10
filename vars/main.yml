@@ -23,7 +23,7 @@ _pipx:
   - { state: "inject", name: "ansible", dependency: "python-vagrant" }
 
 _ansible_collection:
-  - { state: "install", name: "'community.general:>=1.0.0,<2.0.0'" }
+  - { state: "install", name: "'community.general:>=2.0.0,<3.0.0'" }
   - { state: "install", name: "'community.kubernetes:>=1.0.0,<2.0.0'" }
   - { state: "install", name: "'containers.podman:>=1.0.0,<2.0.0'" }
   - { state: "install", name: "'operator_sdk.util:>=0.0.0,<1.0.0'" }
