@@ -62,7 +62,7 @@
   shell: |
     set -euo pipefail
     source /etc/profile.d/pipx.sh
-    pipx {{ item.state }} --force {{ item.args | default('') }} "{{ item.name }}"
+    pipx {{ item.state }} --force {{ item.args | default('') }} {{ item.name }} {{ item.dependency | default('') }}
   args:
     executable: "/bin/bash"
   loop: "{{ _pipx }}"
@@ -75,22 +75,11 @@
     PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
   vars:
     ansible_python_interpreter: "python3"
-  command: ansible-galaxy collection {{ item.state }} "{{ item.name }}"
+  command: ansible-galaxy collection {{ item.state }} {{ item.name }}
   loop: "{{ _ansible_collection }}"
   register: result
   until: result is succeeded
   changed_when: result is not succeeded
-
-- name: install bash completion
-  environment:
-    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-  shell: |
-    set -euo pipefail
-    _MOLECULE_COMPLETE=source molecule > /etc/bash_completion.d/molecule
-  args:
-    executable: "/bin/bash"
-  changed_when: false
-  ignore_errors: true
 
 - name: copy templates
   template:
@@ -110,5 +99,4 @@
     mode: "{{ item.mode | default('0644') }}"
     state: "{{ item.state | default('file') }}"
   loop:
-    - { dest: "/etc/bash_completion.d/molecule" }
     - { dest: "/etc/profile.d/ansible.sh" }

@@ -15,14 +15,15 @@
 # limitations under the License.
 
 _pipx:
-  - { state: "install", name: "ansible", args: "--include-deps --pip-args='ansible>=2.10.3,<2.11.0 docker netaddr openshift'" }
-  - { state: "install", name: "ansible-lint", args: "--pip-args='ansible>=2.10.3,<2.11.0'" }
-  - { state: "install", name: "flake8" }
-  - { state: "install", name: "molecule", args: "--pip-args='molecule>=3.2.0,<3.3.0 ansible>=2.10.3,<2.11.0 docker molecule-docker molecule-podman molecule-vagrant python-vagrant'" }
-  - { state: "install", name: "yamllint" }
+  - { state: "install", args: "--include-deps", name: "'ansible>=2.10.3,<2.11.0'" }
+  - { state: "inject", args: "--include-apps", name: "ansible", dependency: "ansible-lint" }
+  - { state: "inject", name: "ansible", dependency: "docker" }
+  - { state: "inject", name: "ansible", dependency: "netaddr" }
+  - { state: "inject", name: "ansible", dependency: "openshift" }
+  - { state: "inject", name: "ansible", dependency: "python-vagrant" }
 
 _ansible_collection:
-  - { state: "install", name: "community.general:>=1.0.0,<2.0.0" }
-  - { state: "install", name: "community.kubernetes:>=1.0.0,<2.0.0" }
-  - { state: "install", name: "containers.podman:>=1.0.0,<2.0.0" }
-  - { state: "install", name: "operator_sdk.util:>=0.0.0,<1.0.0" }
+  - { state: "install", name: "'community.general:>=1.0.0,<2.0.0'" }
+  - { state: "install", name: "'community.kubernetes:>=1.0.0,<2.0.0'" }
+  - { state: "install", name: "'containers.podman:>=1.0.0,<2.0.0'" }
+  - { state: "install", name: "'operator_sdk.util:>=0.0.0,<1.0.0'" }
