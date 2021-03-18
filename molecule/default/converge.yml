@@ -25,10 +25,5 @@
 
     - name: include role
       include_role:
-        name: git
-      tags: git
-
-    - name: include role
-      include_role:
         name: ansible
       tags: ansible
