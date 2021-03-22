@@ -15,12 +15,12 @@
 # limitations under the License.
 
 _pipx:
-  - { state: "install", args: "--include-deps", name: "'ansible>=2.10.3,<2.11.0'" }
-  - { state: "inject", args: "--include-apps", name: "ansible", dependency: "ansible-lint" }
-  - { state: "inject", name: "ansible", dependency: "docker" }
-  - { state: "inject", name: "ansible", dependency: "netaddr" }
-  - { state: "inject", name: "ansible", dependency: "openshift" }
-  - { state: "inject", name: "ansible", dependency: "python-vagrant" }
+  - { state: "install", args: "--force --include-deps", name: "'ansible>=2.10.3,<2.11.0'" }
+  - { state: "inject", args: "--force --pip-args='--upgrade' --include-apps", name: "ansible", dependency: "ansible-lint" }
+  - { state: "inject", args: "--force --pip-args='--upgrade'", name: "ansible", dependency: "docker" }
+  - { state: "inject", args: "--force --pip-args='--upgrade'", name: "ansible", dependency: "netaddr" }
+  - { state: "inject", args: "--force --pip-args='--upgrade'", name: "ansible", dependency: "openshift" }
+  - { state: "inject", args: "--force --pip-args='--upgrade'", name: "ansible", dependency: "python-vagrant" }
 
 _ansible_collection:
   - { state: "install", name: "'community.general:>=2.0.0,<3.0.0'" }
