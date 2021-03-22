@@ -19,7 +19,6 @@ _pipx:
   - { state: "inject", args: "--force --pip-args='--upgrade' --include-apps", name: "ansible", dependency: "ansible-lint" }
   - { state: "inject", args: "--force --pip-args='--upgrade'", name: "ansible", dependency: "docker" }
   - { state: "inject", args: "--force --pip-args='--upgrade'", name: "ansible", dependency: "netaddr" }
-  - { state: "inject", args: "--force --pip-args='--upgrade'", name: "ansible", dependency: "openshift" }
   - { state: "inject", args: "--force --pip-args='--upgrade'", name: "ansible", dependency: "python-vagrant" }
 
 _ansible_collection:
