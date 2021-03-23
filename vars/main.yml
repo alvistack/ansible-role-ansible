@@ -19,7 +19,6 @@ _pipx:
   - { state: "inject", args: "--include-apps", name: "ansible", dependency: "ansible-lint" }
   - { state: "inject", name: "ansible", dependency: "docker" }
   - { state: "inject", name: "ansible", dependency: "netaddr" }
-  - { state: "inject", name: "ansible", dependency: "openshift" }
   - { state: "inject", name: "ansible", dependency: "python-vagrant" }
 
 _ansible_collection:
