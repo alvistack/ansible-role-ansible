@@ -4,15 +4,12 @@
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-ansible.svg)](https://github.com/alvistack/ansible-role-ansible/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-ansible.svg)](https://github.com/alvistack/ansible-role-ansible/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.ansible-blue.svg)](https://galaxy.ansible.com/alvistack/ansible)
-
 Ansible Role for Ansible Installation (what the hell is this\!?).
-
 You will need this Ansible Role if you also hope to manage the repository and depedency setup of your Ansible, by dogfooding with Ansible Playbook.
 
 ## Requirements
 
-This role require Ansible 4.0 or higher.
-
+This role require Ansible community package 4.1 or higher.
 This role was designed for:
 
   - Ubuntu 18.04, 20.04, 20.10, 21.04
@@ -33,10 +30,8 @@ This role was designed for:
 ## Example Playbook
 
 [molecule/default/converge.yml](molecule/default/converge.yml)
-
 This role could simply deploy to `localhost` as below:
-
-    molecule converge -s default
+molecule converge -s default
 
 ## License
 
