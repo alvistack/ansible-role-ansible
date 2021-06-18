@@ -53,17 +53,6 @@
         - "."
       skip: true
 
-- name: prepare directories
-  file:
-    dest: "{{ item.dest }}"
-    owner: "{{ item.owner | default('root') }}"
-    group: "{{ item.group | default('root') }}"
-    mode: "{{ item.mode | default('0755') }}"
-    state: "{{ item.state | default('directory') }}"
-  loop:
-    - { dest: "/etc/bash_completion.d" }
-    - { dest: "/etc/profile.d" }
-
 - name: pipx install
   environment:
     PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -79,6 +68,17 @@
   register: result
   until: result is succeeded
   changed_when: result is not succeeded
+
+- name: prepare directories
+  file:
+    dest: "{{ item.dest }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0755') }}"
+    state: "{{ item.state | default('directory') }}"
+  loop:
+    - { dest: "/etc/bash_completion.d" }
+    - { dest: "/etc/profile.d" }
 
 - name: ansible-galaxy collection install
   environment:
