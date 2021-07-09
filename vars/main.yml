@@ -21,4 +21,5 @@ _pipx:
   - { state: "inject", name: "ansible", dependency: "netaddr" }
   - { state: "inject", name: "ansible", dependency: "python-vagrant" }
 
-_ansible_collection: []
+_ansible_collection:
+  - { state: "install", name: "'operator_sdk.util:>=0.0.0,<1.0.0'" }
