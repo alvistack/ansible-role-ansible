@@ -25,7 +25,7 @@ _apt_repository:
 
 _apt:
   - { state: "latest", name: "ansible" }
-  - { state: "latest", name: "ansible-lint" }
+  - { state: "latest", name: "python3-ansible-lint" }
   - { state: "latest", name: "python3-cryptography" }
   - { state: "latest", name: "python3-docker" }
   - { state: "latest", name: "python3-jmespath" }
