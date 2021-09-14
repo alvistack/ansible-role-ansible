@@ -19,15 +19,11 @@
   become: true
   tasks:
     - name: ansible --version
-      environment:
-        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       command: ansible --version
       register: result
       changed_when: result is not succeeded
 
     - name: ansible-lint --version
-      environment:
-        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       command: ansible-lint --version
       register: result
       changed_when: result is not succeeded
