@@ -13,7 +13,7 @@ You will need this Ansible Role if you also hope to manage the repository and de
 
 ## Requirements
 
-This role require Ansible community package 4.7 or higher.
+This role require Ansible community package 4.8 or higher.
 
 This role was designed for:
 
