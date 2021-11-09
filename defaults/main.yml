@@ -13,3 +13,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+# Ansible Project release.
+ansible_release: "{{ _ansible_release }}"
+
+# Ansible Project version.
+ansible_project_version: "{{ _ansible_project_version[ansible_release] }}"
+
+# Ansible Core version.
+ansible_core_version: "{{ _ansible_core_version[ansible_release] }}"
