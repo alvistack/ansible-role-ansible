@@ -34,8 +34,8 @@ _yum_repository:
     state: "present"
 
 _yum:
-  - { state: "present", name: "ansible-core-100:{{ ansible_core_version }}" }
-  - { state: "present", name: "ansible-100:{{ ansible_project_version }}" }
+  - { state: "present", name: "ansible-core-100:{{ ansible_core_version }}*" }
+  - { state: "present", name: "ansible-100:{{ ansible_project_version }}*" }
   - { state: "latest", name: "python3-ansible-lint" }
   - { state: "latest", name: "python3-cryptography" }
   - { state: "latest", name: "python3-docker" }
