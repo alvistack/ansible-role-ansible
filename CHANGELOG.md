@@ -4,8 +4,8 @@
 
 ### Major Changes
 
+  - Upgrade minimal Ansible community package support to 4.9.0
   - Support multiple Ansible release
-  - Upgrade minimal Ansible community package support to 4.8.0
 
 ## 5.3.0 - 2021-10-20
 
