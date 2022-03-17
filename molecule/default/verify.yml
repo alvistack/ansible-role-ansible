@@ -19,11 +19,11 @@
   become: true
   tasks:
     - name: ansible --version
-      command: ansible --version
+      ansible.builtin.command: ansible --version
       register: result
       changed_when: result is not succeeded
 
     - name: ansible-lint --version
-      command: ansible-lint --version
+      ansible.builtin.command: ansible-lint --version
       register: result
       changed_when: result is not succeeded
