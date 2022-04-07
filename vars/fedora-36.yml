@@ -16,20 +16,26 @@
 
 _ansible_release: "5.6"
 
-_apt_key:
-  - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
-    url: "http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_20.04/Release.key"
-    id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
+_rpm_key:
+  - key: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_36/repodata/repomd.xml.key"
+    fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
     state: "present"
 
-_apt_repository:
-  - filename: "home:alvistack"
-    repo: "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_20.04/ /"
+_yum_repository:
+  - file: "home:alvistack"
+    name: "home_alvistack"
+    description: "home:alvistack (Fedora_36)"
+    baseurl: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_36"
+    enabled: true
+    priority: "2"
+    module_hotfixes: true
+    gpgcheck: true
+    gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_36/repodata/repomd.xml.key"
     state: "present"
 
-_apt:
-  - { state: "present", name: "ansible-core=100:{{ ansible_core_version }}*" }
-  - { state: "present", name: "ansible=100:{{ ansible_project_version }}*" }
+_yum:
+  - { state: "present", name: "ansible-core-100:{{ ansible_core_version }}*" }
+  - { state: "present", name: "ansible-100:{{ ansible_project_version }}*" }
   - { state: "latest", name: "python3-ansible-lint" }
   - { state: "latest", name: "python3-cryptography" }
   - { state: "latest", name: "python3-docker" }
