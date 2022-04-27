@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_ansible_release: "5.6"
+_ansible_release: "5.7"
 
 _apt_key:
   - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
