@@ -110,7 +110,6 @@
 default:
   before_script:
     - *script-git-submodule
-  allow_failure: false
   retry: 2
 
 build:ubuntu-22.04-libvirt:
