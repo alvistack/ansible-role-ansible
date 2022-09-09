@@ -34,12 +34,13 @@ _yum_repository:
     state: "present"
 
 _zypper:
-  - { state: "present", name: "ansible-core-100:{{ ansible_core_version }}" }
-  - { state: "present", name: "ansible-100:{{ ansible_project_version }}" }
-  - { state: "latest", name: "ansible-lint" }
+  - { state: "latest", name: "python3-pyOpenSSL" }
   - { state: "latest", name: "python3-cryptography" }
   - { state: "latest", name: "python3-docker" }
   - { state: "latest", name: "python3-jmespath" }
   - { state: "latest", name: "python3-netaddr" }
   - { state: "latest", name: "python3-resolvelib" }
   - { state: "latest", name: "python3-vagrant" }
+  - { state: "present", name: "ansible-core-100:{{ ansible_core_version }}" }
+  - { state: "present", name: "ansible-100:{{ ansible_project_version }}" }
+  - { state: "latest", name: "ansible-lint" }
