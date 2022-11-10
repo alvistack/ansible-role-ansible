@@ -1,6 +1,6 @@
 ---
 
-# (c) Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+# Copyright 2022 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,16 +15,16 @@
 # limitations under the License.
 
 _ansible_project_version:
+  "6.6": "6.6.0"
   "6.5": "6.5.0"
-  "6.4": "6.4.0"
   "5.10": "5.10.0"
   "5.9": "5.9.0"
   "4.10": "4.10.0"
   "4.9": "4.9.0"
 
 _ansible_core_version:
-  "6.5": "2.13.5"
-  "6.4": "2.13.5"
+  "6.6": "2.13.6"
+  "6.5": "2.13.6"
   "5.10": "2.12.10"
   "5.9": "2.12.10"
   "4.10": "2.11.12"
