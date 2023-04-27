@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+-   Support Ansible community package 7.5.0
 -   Support Fedora 38
 
 ## 7.4.0 - 2023-03-29
