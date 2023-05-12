@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+-   Remove Fedora 36 support
 -   Support Ansible community package 7.5.0
 -   Support Fedora 38
 
