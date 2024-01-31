@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_ansible_release: "9.1"
+_ansible_release: "9.2"
 
 _rpm_key:
   - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_39/repodata/repomd.xml.key"
