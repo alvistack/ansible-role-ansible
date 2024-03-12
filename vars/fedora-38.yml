@@ -17,30 +17,30 @@
 _ansible_release: "9.3"
 
 _rpm_key:
-  - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_38/repodata/repomd.xml.key"
-    fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
-    state: "present"
+  - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_38/repodata/repomd.xml.key
+    fingerprint: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
+    state: present
 
 _yum_repository:
-  - file: "home:alvistack"
-    name: "home_alvistack"
-    description: "home:alvistack (Fedora_38)"
-    baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_38"
+  - file: home:alvistack
+    name: home_alvistack
+    description: home:alvistack (Fedora_38)
+    baseurl: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_38
     enabled: true
     priority: "2"
     module_hotfixes: true
     gpgcheck: true
-    gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_38/repodata/repomd.xml.key"
-    state: "present"
+    gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_38/repodata/repomd.xml.key
+    state: present
 
 _yum:
-  - { state: "latest", name: "python3-cryptography" }
-  - { state: "latest", name: "python3-docker" }
-  - { state: "latest", name: "python3-jmespath" }
-  - { state: "latest", name: "python3-netaddr" }
-  - { state: "latest", name: "python3-pyOpenSSL" }
-  - { state: "latest", name: "python3-resolvelib" }
-  - { state: "latest", name: "python3-vagrant" }
-  - { state: "present", name: "ansible-core-100:{{ ansible_core_version }}*" }
-  - { state: "present", name: "ansible-100:{{ ansible_project_version }}*" }
-  - { state: "latest", name: "ansible-lint" }
+  - { state: latest, name: python3-cryptography }
+  - { state: latest, name: python3-docker }
+  - { state: latest, name: python3-jmespath }
+  - { state: latest, name: python3-netaddr }
+  - { state: latest, name: python3-pyOpenSSL }
+  - { state: latest, name: python3-resolvelib }
+  - { state: latest, name: python3-vagrant }
+  - { state: present, name: "ansible-core-100:{{ ansible_core_version }}*" }
+  - { state: present, name: "ansible-100:{{ ansible_project_version }}*" }
+  - { state: latest, name: ansible-lint }
