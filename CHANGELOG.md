@@ -2,6 +2,7 @@
 
 ## 9.5.0 - TBC
 
+-   Support Ansible community package 9.5.0
 -   Support Ubuntu 24.04
 
 ## 9.4.0 - TBC
