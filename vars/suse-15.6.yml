@@ -14,26 +14,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_ansible_release: "9.6"
+_ansible_release: "4.10"
 
 _rpm_key:
-  - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_38/repodata/repomd.xml.key
+  - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.6/repodata/repomd.xml.key
     fingerprint: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
     state: present
 
 _yum_repository:
-  - file: home:alvistack
+  - file: home_alvistack
     name: home_alvistack
-    description: home:alvistack (Fedora_38)
-    baseurl: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_38
+    description: home:alvistack (openSUSE_Leap_15.6)
+    baseurl: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.6
     enabled: true
     priority: "2"
     module_hotfixes: true
     gpgcheck: true
-    gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_38/repodata/repomd.xml.key
+    gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.6/repodata/repomd.xml.key
     state: present
 
-_yum:
+_zypper:
   - { state: latest, name: python3-cryptography }
   - { state: latest, name: python3-docker }
   - { state: latest, name: python3-jmespath }
@@ -41,6 +41,6 @@ _yum:
   - { state: latest, name: python3-pyOpenSSL }
   - { state: latest, name: python3-resolvelib }
   - { state: latest, name: python3-vagrant }
-  - { state: present, name: "ansible-core-100:{{ ansible_core_version }}*" }
-  - { state: present, name: "ansible-100:{{ ansible_project_version }}*" }
+  - { state: present, name: "ansible-core-100:{{ ansible_core_version }}" }
+  - { state: present, name: "ansible-100:{{ ansible_project_version }}" }
   - { state: latest, name: ansible-lint }
