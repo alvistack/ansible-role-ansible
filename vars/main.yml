@@ -15,7 +15,7 @@
 # limitations under the License.
 
 _ansible_project_version:
-  "12.0": 12.0.0~beta4
+  "12.0": 12.0.0~beat5
   "11.9": 11.9.0
   "11.8": 11.8.0
   "10.7": 10.7.0
