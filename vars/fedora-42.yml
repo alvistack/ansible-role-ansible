@@ -33,7 +33,7 @@ _yum_repository:
     gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_42/repodata/repomd.xml.key
     state: present
 
-_yum:
+_dnf:
   - { state: latest, name: python3-cryptography }
   - { state: latest, name: python3-docker }
   - { state: latest, name: python3-jmespath }
