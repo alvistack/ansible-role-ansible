@@ -29,9 +29,9 @@ __ansible_project_version:
 
 _ansible_core_version: "{{ __ansible_core_version[ansible_release] }}"
 __ansible_core_version:
-  "13.6": 2.20.5
-  "12.3": 2.19.9
-  "11.13": 2.18.15
+  "13.6": 2.20.6
+  "12.3": 2.19.10
+  "11.13": 2.18.17
   "10.7": 2.17.14
   "9.13": 2.16.17
   "8.7": 2.15.13
