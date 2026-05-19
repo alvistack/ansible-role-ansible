@@ -18,7 +18,7 @@
 ansible_release: "{{ _ansible_release }}"
 
 # Ansible Project version.
-ansible_project_version: "{{ _ansible_project_version[ansible_release] }}"
+ansible_project_version: "{{ _ansible_project_version }}"
 
 # Ansible Core version.
-ansible_core_version: "{{ _ansible_core_version[ansible_release] }}"
+ansible_core_version: "{{ _ansible_core_version }}"
